@@ -1,7 +1,7 @@
 import React from "react";
 
 function Form({ updateMainCat }) {
-	const includesHangul = (text) => /[ㄱ-ㅎ|ㅏ-ㅣ|가-힣]/i.test(text);
+	const includesHangul = (text) => /[ㄱ-ㅎ|ㅏ-ㅣ|가-힣#%^&]/i.test(text);
 	const [value, setValue] = React.useState("");
 	const [errorMsg, setErrorMsg] = React.useState("");
 
@@ -9,7 +9,7 @@ function Form({ updateMainCat }) {
 		const userValue = e.target.value;
 		setErrorMsg("");
 		if (includesHangul(userValue)) {
-			setErrorMsg("한글은 입력이 불가능합니다. 영어로 적어주세요!");
+			setErrorMsg("한글과 특수기호는 입력이 불가능합니다. 영어로 적어주세요!");
 		} else {
 			setErrorMsg("");
 		}
