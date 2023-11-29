@@ -33,7 +33,7 @@ function Form({ updateMainCat }) {
 				onChange={handleInputChange}
 				value={value}
 			/>
-			<button type="submit">생성</button>
+			<button type="submit">생성22</button>
 			<p style={{ color: "red" }}>{errorMsg}</p>
 		</form>
 	);

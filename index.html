@@ -52,7 +52,7 @@
 					`${OPEN_API_DOMAIN}/cat/says/${text}?json=true`
 				);
 				const responseJson = await response.json();
-				return `${OPEN_API_DOMAIN}/cat/${responseJson._id}`;
+				return `${OPEN_API_DOMAIN}/cat/${responseJson._id}/says/${text}?fontsize=30&fontColor=white`;
 			};
 
 			console.log("야옹");
