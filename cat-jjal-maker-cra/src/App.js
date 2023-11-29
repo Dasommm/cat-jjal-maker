@@ -103,8 +103,11 @@ const App = () => {
 		<div>
 			<Title>
 				{counter === null || counter === 0
-					? "고양이 가라사대"
-					: counter + "번째 고양이 가라사대"}
+					? "RANDOM CAT IMAGE MAKER!"
+					: counter === 1 ? counter + "st cat!"
+					: counter === 2 ? counter + "nd catt!!"
+					: counter === 3 ? counter + "rd cattt!!!"
+					: counter + "th Catttt!!!!"}
 			</Title>
 			<Form updateMainCat={updateMainCat} />
 			<MainCard
