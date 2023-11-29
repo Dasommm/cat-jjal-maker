@@ -19,7 +19,7 @@ const fetchCat = async (text) => {
 	const OPEN_API_DOMAIN = "https://cataas.com";
 	const response = await fetch(`${OPEN_API_DOMAIN}/cat/says/${text}?json=true`);
 	const responseJson = await response.json();
-	return `${OPEN_API_DOMAIN}/cat/${responseJson._id}/says/${text}`;
+	return `${OPEN_API_DOMAIN}/cat/${responseJson._id}/says/${text}?fontsize=50&fontColor=white`;
 };
 
 console.log("야옹");
@@ -66,7 +66,7 @@ const App = () => {
 	const alreadyFavorite = favorites.includes(catChange);
 
 	async function setInitialCat() {
-		const newCat = await fetchCat("first cat");
+		const newCat = await fetchCat("WRITE YOUR THOUGHT!");
 		setCatChange(newCat);
 	}
 

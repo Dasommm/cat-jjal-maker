@@ -9,7 +9,7 @@ function Form({ updateMainCat }) {
 		const userValue = e.target.value;
 		setErrorMsg("");
 		if (includesHangul(userValue)) {
-			setErrorMsg("한글노노");
+			setErrorMsg("한글은 입력이 불가능합니다. 영어로 적어주세요!");
 		} else {
 			setErrorMsg("");
 		}
@@ -19,7 +19,7 @@ function Form({ updateMainCat }) {
 		e.preventDefault();
 		setErrorMsg("");
 		if (value === "") {
-			setErrorMsg("빈값이에요");
+			setErrorMsg("아무것도 입력하지 않았습니다. 내용을 입력해주세요!");
 			return;
 		}
 		updateMainCat(value);
@@ -33,7 +33,7 @@ function Form({ updateMainCat }) {
 				onChange={handleInputChange}
 				value={value}
 			/>
-			<button type="submit">생성22</button>
+			<button type="submit">생성</button>
 			<p style={{ color: "red" }}>{errorMsg}</p>
 		</form>
 	);
